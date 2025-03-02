@@ -38,7 +38,9 @@ def makeFile(file:str,padding:str):
     with  open(file,"r") as fptr:
         ln = fptr.readlines()[0]
         code = 1
-        if('#!' in ln):
+        elif('!!' in ln):
+            pass
+        elif('#!' in ln):
             p = ln.find('#!')
             r = ln[p+2:-1]
             print(f"{padding} {file} - {r}")
